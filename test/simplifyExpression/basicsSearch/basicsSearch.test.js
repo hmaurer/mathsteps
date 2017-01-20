@@ -46,6 +46,10 @@ describe('simplify basics', function () {
     ['(x+3)/-1', '-(x + 3)'],
     // exponent to 0 -> 1
     ['(x+3)^0', '1'],
+    // 1/0 should fail
+    ['1/0', '1/0'],
+    // 0/0 should fail
+    ['0/0', '0/0'],
   ];
   tests.forEach(t => testSimplify(t[0], t[1]));
 });
